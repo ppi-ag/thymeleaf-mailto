@@ -12,7 +12,7 @@ Supported attributes at anchor-tags "<a>" are:
 
 The maximal lenght of the link is 507 characters otherwise IE will not show anything.
 
-See the testdata at src/test/resources/thymeleaf/mailto.
+See the testdata at [src/test/resources/thymeleaf/mailto](https://github.com/ppi-ag/thymeleaf-mailto/tree/master/src/test/resources/thymeleaf/mail).
 
 To use codecompletion add `xmlns:mail="http://www.ppi.de/thymeleaf/mailto"` to the html-tag.
 
