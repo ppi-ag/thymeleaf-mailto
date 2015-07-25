@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.ppi.oss</groupId>
     <artifactId>thymeleaf-mailto</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>thymeleaf-mailto</name>
     <description>Thymeleaf dialect for support of mailto</description>
     <url>https://github.com/ppi-ag/thymeleaf-mailto</url>
@@ -213,7 +213,7 @@
         <url>https://github.com/ppi-ag/thymeleaf-mailto</url>
         <connection>scm:git:https://github.com/ppi-ag/thymeleaf-mailto.git</connection>
         <developerConnection>scm:git:git@github.com:ppi-ag/thymeleaf-mailto.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>thymeleaf-mailto-0.1</tag>
     </scm>
 </project>
 
