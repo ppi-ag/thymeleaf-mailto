@@ -1,4 +1,4 @@
-# thymeleaf mailto
+# thymeleaf mailto[![Build Status](https://travis-ci.org/ppi-ag/thymeleaf-mailto.svg?branch=master)](https://travis-ci.org/ppi-ag/thymeleaf-mailto)
 
 Thymeleaf Dialect which helps to create mailto-links.
 
