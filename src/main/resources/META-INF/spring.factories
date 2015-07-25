@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+de.ppi.fuwesta.thymeleaf.springboot.MailtoDialectConfig

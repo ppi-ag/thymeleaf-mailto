@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dialect xmlns="http://www.thymeleaf.org/extras/dialect"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.thymeleaf.org/extras/dialect
+                        http://www.thymeleaf.org/xsd/thymeleaf-extras-dialect-2.1.xsd"
+    prefix="mail"
+    namespace-uri="http://www.ppi.de/thymeleaf/mailto"
+    class="de.ppi.fuwesta.thymeleaf.mail.MailToDialect">
+
+    <attribute-processor name="to" class="de.ppi.fuwesta.thymeleaf.mail.MailAttrProcessor"/>
+
+</dialect>
