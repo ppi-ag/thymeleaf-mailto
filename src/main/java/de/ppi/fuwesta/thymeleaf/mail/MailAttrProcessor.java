@@ -104,6 +104,13 @@ public class MailAttrProcessor extends AbstractAttrProcessor {
         return urlBuilder.toString();
     }
 
+    /**
+     * Added more information to the urlbuilder.
+     * 
+     * @param urlBuilder an urlbuilder.
+     * @param name the name of the attribute.
+     * @param value the value.
+     */
     private void addEncodedValue(final StringBuilder urlBuilder,
             final String name, String value) {
         if (value != null) {
@@ -126,6 +133,14 @@ public class MailAttrProcessor extends AbstractAttrProcessor {
         }
     }
 
+    /**
+     * Extract the attribute.
+     * 
+     * @param element the element where to search.
+     * @param arguments thymeleaf arguments.
+     * @param attributeName the name of the attribute.
+     * @return the value of the attribute.
+     */
     private String extractAttribute(Element element, Arguments arguments,
             String attributeName) {
         final String toExpr = element.getAttributeValue(attributeName);
@@ -150,6 +165,13 @@ public class MailAttrProcessor extends AbstractAttrProcessor {
         return PRECEDENCE;
     }
 
+    /**
+     * Parse the expression of an value.
+     * 
+     * @param arguments thymeleaf arguments.
+     * @param input the expression.
+     * @return the eavluated valued.
+     */
     private String parse(final Arguments arguments, String input) {
         final Configuration configuration = arguments.getConfiguration();
 
