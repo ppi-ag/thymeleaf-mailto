@@ -27,8 +27,14 @@ import de.ppi.fuwesta.thymeleaf.mail.MailToDialect;
  */
 public abstract class ThymeleafTest {
 
-    private static final TestExecutor executor = new TestExecutor();
+    /**
+     * Thymeleaf testexecutor.
+     */
+    private static final TestExecutor EXECUTOR = new TestExecutor();
 
+    /**
+     * Testspecification.
+     */
     private final File testSpec;
 
     /**
@@ -42,11 +48,18 @@ public abstract class ThymeleafTest {
         final SpringWebProcessingContextBuilder springPCBuilder =
                 new SpringWebProcessingContextBuilder();
         springPCBuilder.setApplicationContextConfigLocation(null);
-        executor.setProcessingContextBuilder(springPCBuilder);
-        executor.setDialects(dialects);
+        EXECUTOR.setProcessingContextBuilder(springPCBuilder);
+        EXECUTOR.setDialects(dialects);
 
     }
 
+    /**
+     * Find all filenames.
+     * 
+     * @param testDir the search - directory.
+     * @return a Collection of files.
+     * @throws IOException if something goes wrong.
+     */
     protected static Collection<Object[]> getFilenames(String testDir)
             throws IOException {
         final PathMatchingResourcePatternResolver resolver =
@@ -60,25 +73,36 @@ public abstract class ThymeleafTest {
     }
 
     /**
-     * @throws java.lang.Exception
+     * @throws java.lang.Exception if something goes wrong.
      */
     @Before
     public void setUp() throws Exception {
-        executor.reset();
+        EXECUTOR.reset();
     }
 
+    /**
+     * Initiates an object of type ThymeleafTest.
+     * 
+     * @param name the name of the test.
+     * @param testSpec the test-specification.
+     */
     public ThymeleafTest(String name, File testSpec) {
         this.testSpec = testSpec;
     }
 
+    /**
+     * Test of the specification.
+     */
     @Test
-    public void testField() {
-        executor.execute("file://" + testSpec.getAbsolutePath());
-        assertResultOK(executor.getReporter());
+    public void testSpecification() {
+        EXECUTOR.execute("file://" + testSpec.getAbsolutePath());
+        assertResultOK(EXECUTOR.getReporter());
     }
 
     /**
-     * @param reporter
+     * Check the result.
+     * 
+     * @param reporter a testreporter.
      */
     private void assertResultOK(ITestReporter reporter) {
         for (String testName : reporter.getAllTestNames()) {

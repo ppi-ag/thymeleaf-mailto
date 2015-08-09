@@ -11,12 +11,18 @@ import org.junit.runners.Parameterized.Parameters;
 import de.ppi.fuwesta.thymeleaf.basic.ThymeleafTest;
 
 /**
- * Class DiverseThymeleafTest
+ * Test for {@link MailToDialect}.
  * 
  */
 @RunWith(Parameterized.class)
 public class MailThymeleafTest extends ThymeleafTest {
 
+    /**
+     * The filenames of tests.
+     * 
+     * @return a list of files with testspecification.
+     * @throws IOException if something goes wrong.
+     */
     @Parameters(name = "{0}")
     public static Collection<Object[]> getFilenames() throws IOException {
         return ThymeleafTest
@@ -24,10 +30,10 @@ public class MailThymeleafTest extends ThymeleafTest {
     }
 
     /**
-     * Initiates an object of type DiverseThymeleafTest.
+     * Initiates an object of type MailThymeleafTest.
      * 
-     * @param name
-     * @param testSpec
+     * @param name the name of the test.
+     * @param testSpec the test-specification.
      */
     public MailThymeleafTest(String name, File testSpec) {
         super(name, testSpec);
